@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tabela de Fotos</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 1.5rem;
+        background: #eef2f7;
+        color: #222;
+      }
+      h1 {
+        color: #1b3a66;
+        margin-bottom: 1rem;
+      }
+      .photo-table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+      .photo-table th,
+      .photo-table td {
+        padding: 0.75rem;
+        border: 1px solid #d8dee8;
+        vertical-align: top;
+      }
+      .photo-table th {
+        background: #e5ecf5;
+        text-align: left;
+        font-weight: 600;
+      }
+      .photo-card {
+        display: inline-block;
+        width: 100%;
+        max-width: 240px;
+        border-radius: 14px;
+        overflow: hidden;
+        box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+        transition: transform 0.25s ease, box-shadow 0.25s ease;
+      }
+      .photo-card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 16px 30px rgba(0, 0, 0, 0.18);
+      }
+      .photo-card img {
+        width: 100%;
+        display: block;
+        object-fit: cover;
+        height: 180px;
+      }
+      .photo-card .description {
+        padding: 0.9rem;
+        background: #fff;
+      }
+      .photo-card .description h3 {
+        margin: 0 0 0.5rem;
+        font-size: 1rem;
+      }
+      .photo-card .description p {
+        margin: 0;
+        color: #555;
+        font-size: 0.95rem;
+        line-height: 1.4;
+      }
+      .replace-button,
+      .save-button {
+        margin-top: 0.75rem;
+        background: #1b3a66;
+        color: #fff;
+        border: none;
+        border-radius: 8px;
+        padding: 0.55rem 0.95rem;
+        cursor: pointer;
+        font-size: 0.95rem;
+        transition: background 0.2s ease, transform 0.2s ease;
+      }
+      .replace-button:hover,
+      .save-button:hover {
+        background: #162f56;
+        transform: translateY(-1px);
+      }
+      .save-row {
+        margin-top: 1.75rem;
+      }
+      @media (max-width: 720px) {
+        .photo-table,
+        .photo-table th,
+        .photo-table td {
+          display: block;
+          width: 100%;
+        }
+        .photo-table th {
+          display: none;
+        }
+        .photo-table td {
+          border: none;
+          padding: 0;
+          margin-bottom: 1.25rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Tabela de Fotos</h1>
+    <table class="photo-table">
+      <thead>
+        <tr>
+          <th>Foto</th>
+          <th>Nome</th>
+          <th>Descrição</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <div class="photo-card">
+              <img id="photo-1" src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=640&q=80" alt="Paisagem montanhosa" />
+            </div>
+          </td>
+          <td>Paisagem Montanhosa</td>
+          <td>
+            Céu azul e montanhas serenas.
+            <div>
+              <button type="button" class="replace-button" onclick="triggerFileInput('file-input-1')">Trocar foto</button>
+              <input type="file" accept="image/*" id="file-input-1" class="photo-input" data-img-id="photo-1" style="display:none" />
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div class="photo-card">
+              <img id="photo-2" src="https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=640&q=80" alt="Café da manhã" />
+            </div>
+          </td>
+          <td>Café da Manhã</td>
+          <td>
+            Uma mesa aconchegante com café e doces.
+            <div>
+              <button type="button" class="replace-button" onclick="triggerFileInput('file-input-2')">Trocar foto</button>
+              <input type="file" accept="image/*" id="file-input-2" class="photo-input" data-img-id="photo-2" style="display:none" />
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div class="photo-card">
+              <img id="photo-3" src="https://images.unsplash.com/photo-1519682577862-22b62b24e493?auto=format&fit=crop&w=640&q=80" alt="Vila urbana colorida" />
+            </div>
+          </td>
+          <td>Vila Urbana</td>
+          <td>
+            Ruas coloridas e arquitetura charmosa.
+            <div>
+              <button type="button" class="replace-button" onclick="triggerFileInput('file-input-3')">Trocar foto</button>
+              <input type="file" accept="image/*" id="file-input-3" class="photo-input" data-img-id="photo-3" style="display:none" />
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div class="photo-card">
+              <img id="photo-4" src="https://images.unsplash.com/photo-1491975474562-1f4e30bc9468?auto=format&fit=crop&w=640&q=80" alt="Fundo do mar" />
+            </div>
+          </td>
+          <td>Fundo do Mar</td>
+          <td>
+            Águas cristalinas e tranquilas.
+            <div>
+              <button type="button" class="replace-button" onclick="triggerFileInput('file-input-4')">Trocar foto</button>
+              <input type="file" accept="image/*" id="file-input-4" class="photo-input" data-img-id="photo-4" style="display:none" />
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="save-row">
+      <button type="button" class="save-button" onclick="saveImages()">Salvar Imagens</button>
+    </div>
+    <script>
+      function triggerFileInput(inputId) {
+        const input = document.getElementById(inputId);
+        if (input) {
+          input.click();
+        }
+      }
+
+      document.querySelectorAll('.photo-input').forEach((input) => {
+        input.addEventListener('change', (event) => {
+          const file = event.target.files && event.target.files[0];
+          const imgId = event.target.dataset.imgId;
+          if (!file || !imgId) return;
+
+          const img = document.getElementById(imgId);
+          if (!img) return;
+
+          const objectUrl = URL.createObjectURL(file);
+          img.src = objectUrl;
+          img.alt = file.name;
+        });
+      });
+
+      async function saveImages() {
+        const images = document.querySelectorAll('.photo-card img');
+        images.forEach(async (img, index) => {
+          try {
+            const response = await fetch(img.src);
+            const blob = await response.blob();
+            const link = document.createElement('a');
+            link.href = URL.createObjectURL(blob);
+            link.download = `foto-${index + 1}.jpg`;
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+            URL.revokeObjectURL(link.href);
+          } catch (error) {
+            console.error('Falha ao salvar imagem:', error);
+          }
+        });
+      }
+    </script>
+  </body>
+</html>
