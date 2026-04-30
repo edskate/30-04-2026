@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Página de Exemplo</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 2rem;
+        background: #f4f4f9;
+        color: #333;
+      }
+      header {
+        margin-bottom: 2rem;
+      }
+      h1 {
+        color: #1a1a8c;
+      }
+      .gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 1.5rem;
+      }
+      .photo-card {
+        position: relative;
+        border-radius: 16px;
+        overflow: hidden;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+      }
+      .photo-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 18px 40px rgba(0, 0, 0, 0.18);
+      }
+      .photo-card img {
+        display: block;
+        width: 100%;
+        height: 220px;
+        object-fit: cover;
+      }
+      .photo-card .caption {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(180deg, transparent, rgba(0, 0, 0, 0.65));
+        color: #fff;
+        padding: 1rem;
+      }
+      .photo-card .caption h3 {
+        margin: 0 0 0.25rem;
+        font-size: 1.1rem;
+      }
+      .photo-card .caption p {
+        margin: 0;
+        font-size: 0.95rem;
+        opacity: 0.9;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Galeria de Fotos</h1>
+      <p>Veja um layout de fotos com cards que exibem efeito hover.</p>
+    </header>
+    <main class="gallery">
+      <article class="photo-card">
+        <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=800&q=80" alt="Paisagem montanhosa" />
+        <div class="caption">
+          <h3>Paisagem Montanhosa</h3>
+          <p>Céu limpo e natureza serena.</p>
+        </div>
+      </article>
+      <article class="photo-card">
+        <img src="https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=800&q=80" alt="Café da manhã" />
+        <div class="caption">
+          <h3>Café da Manhã</h3>
+          <p>Texturas e cores acolhedoras.</p>
+        </div>
+      </article>
+      <article class="photo-card">
+        <img src="https://images.unsplash.com/photo-1519682577862-22b62b24e493?auto=format&fit=crop&w=800&q=80" alt="Vila urbana colorida" />
+        <div class="caption">
+          <h3>Vila Urbana</h3>
+          <p>Arquitetura vibrante e charmosa.</p>
+        </div>
+      </article>
+      <article class="photo-card">
+        <img src="https://images.unsplash.com/photo-1491975474562-1f4e30bc9468?auto=format&fit=crop&w=800&q=80" alt="Fundo do mar" />
+        <div class="caption">
+          <h3>Fundo do Mar</h3>
+          <p>Azul profundo e ambiente tranquilo.</p>
+        </div>
+      </article>
+      <article class="photo-card">
+        <img src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=800&q=80" alt="Estrada na floresta" />
+        <div class="caption">
+          <h3>Estrada na Floresta</h3>
+          <p>Um caminho calmo entre árvores verdes.</p>
+        </div>
+      </article>
+      <article class="photo-card">
+        <img src="https://images.unsplash.com/photo-1496024840928-4c417adf211d?auto=format&fit=crop&w=800&q=80" alt="Praia ao entardecer" />
+        <div class="caption">
+          <h3>Praia ao Entardecer</h3>
+          <p>Cores quentes sobre o mar tranquilo.</p>
+        </div>
+      </article>
+      <article class="photo-card">
+        <img src="https://images.unsplash.com/photo-1519608487953-e999c86e7455?auto=format&fit=crop&w=800&q=80" alt="Cidade à noite" />
+        <div class="caption">
+          <h3>Cidade à Noite</h3>
+          <p>Luzes brilhantes e movimento urbano.</p>
+        </div>
+      </article>
+      <article class="photo-card">
+        <img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=800&q=80" alt="Cachoeira" />
+        <div class="caption">
+          <h3>Cachoeira</h3>
+          <p>Água caindo em meio à natureza.</p>
+        </div>
+      </article>
+      <article class="photo-card">
+        <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=800&q=80" alt="Interior moderno" />
+        <div class="caption">
+          <h3>Interior Moderno</h3>
+          <p>Design elegante e atmosfera acolhedora.</p>
+        </div>
+      </article>
+      <article class="photo-card">
+        <img src="https://images.unsplash.com/photo-1526401485004-7c770f3d8172?auto=format&fit=crop&w=800&q=80" alt="Paisagem de inverno" />
+        <div class="caption">
+          <h3>Paisagem de Inverno</h3>
+          <p>Neve suave cobrindo o campo.</p>
+        </div>
+      </article>
+      <article class="photo-card">
+        <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=800&q=80" alt="Pôr do sol na colina" />
+        <div class="caption">
+          <h3>Pôr do Sol</h3>
+          <p>Atmosfera dourada e relaxante.</p>
+        </div>
+      </article>
+      <article class="photo-card">
+        <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=800&q=80" alt="Jardim florido" />
+        <div class="caption">
+          <h3>Jardim Florido</h3>
+          <p>Flores coloridas em plena primavera.</p>
+        </div>
+      </article>
+      <article class="photo-card">
+        <img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=800&q=80" alt="Trilhas montanhosas" />
+        <div class="caption">
+          <h3>Trilhas Montanhosas</h3>
+          <p>Aventuras em alto relevo.</p>
+        </div>
+      </article>
+      <article class="photo-card">
+        <img src="https://images.unsplash.com/photo-1491553895911-0055eca6402d?auto=format&fit=crop&w=800&q=80" alt="Ponte antiga" />
+        <div class="caption">
+          <h3>Ponte Antiga</h3>
+          <p>História à beira do rio.</p>
+        </div>
+      </article>
+    </main>
+  </body>
+</html>
