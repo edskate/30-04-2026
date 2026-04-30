@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 1.5rem;
+            background: #eef2f7;
+            color: #222;
+        }
+        h1 {
+            color: #1b3a66;
+            margin-bottom: 1rem;
+        }
+        .photo-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .photo-table th,
+        .photo-table td {
+            padding: 0.75rem;
+            border: 1px solid #d8dee8;
+            vertical-align: top;
+        }
+        .photo-table th {
+            background: #e5ecf5;
+            text-align: left;
+            font-weight: 600;
+        }
+        .photo-card {
+            display: inline-block;
+            width: 100%;
+            max-width: 240px;
+            border-radius: 14px;
+            overflow: hidden;
+            box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+        }
+        .photo-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 16px 30px rgba(0, 0, 0, 0.18);
+        }
+        .photo-card img {
+            width: 100%;
+            display: block;
+            object-fit: cover;
+            height: 180px;
+        }
+        .photo-card .description {
+            padding: 0.9rem;
+            background: #fff;
+        }
+        .photo-card .description h3 {
+            margin: 0 0 0.5rem;
+            font-size: 1rem;
+        }
+        .photo-card .description p {
+            margin: 0;
+            font-size: 0.9rem;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <h1>Minha Galeria de Fotos</h1>
+
+    <table class="photo-table">
+        <thead>
+            <tr>
+                <th>Foto</th>
+                <th>Descrição</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <div class="photo-card 
+                    ">
+                        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80" alt="Foto 1">
+                        <div class="description">
+                            <h3>Pôr do Sol na Praia</h3>
+                            <p>Um lindo pôr do sol visto da praia.</p>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <p>Descrição da Foto 1</p>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
